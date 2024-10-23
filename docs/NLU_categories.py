@@ -36,9 +36,16 @@ response = natural_language_understanding.analyze(
 
 print(json.dumps(response, indent=2))
 
-#Enttities
-response = natural_language_understanding.analyze(
-    url='www.cnn.com',
-    features=Features(entities=EntitiesOptions(sentiment=True,limit=1))).get_result()
+# #Enttities
+# response = natural_language_understanding.analyze(
+#     url='www.cnn.com',
+#     features=Features(entities=EntitiesOptions(sentiment=True,limit=1))).get_result()
 
-print(json.dumps(response, indent=2))
+# print(json.dumps(response, indent=2))
+
+#Emotions
+# response = natural_language_understanding.analyze(
+#     html="<html><head><title>Fruits</title></head><body><h1>Apples and Oranges</h1><p>I love apples! I don't like oranges.</p></body></html>",
+#     features=Features(emotion=EmotionOptions(targets=['apples','oranges']))).get_result()
+
+# print(json.dumps(response, indent=2))
